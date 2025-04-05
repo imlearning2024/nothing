@@ -578,6 +578,10 @@ video {
   margin: auto;
 }
 
+.m-2{
+  margin: 0.5rem;
+}
+
 .ml-auto{
   margin-left: auto;
 }
