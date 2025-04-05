@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tailwind-css</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar - Modern & Responsive -->
+    <nav class="bg-white flex justify-between items-center p-3">
+      <div class="flex items-center gap-2">
+        <!-- Logo Image -->
+        <a href="#">
+          <img
+            src="./assets/tailwind logo.webp"
+            alt="Tailwind Logo"
+            class="max-w-12 max-h-12 object-cover"
+          />
+        </a>
+        <span class="text-2xl text-black font-heading">Logo</span>
+      </div>
+
+      <!-- Links -->
+      <div
+        id="nav-menu"
+        class="font-code hidden md:flex gap-8 justify-between items-center"
+      >
+        <a href="#" class="text-lg hover:text-indigo-500">Pricing</a>
+        <a href="#" class="text-lg hover:text-indigo-500">Courses</a>
+        <a href="#" class="text-lg hover:text-indigo-500">Tailwind</a>
+        <a href="#" class="text-lg hover:text-indigo-500">Mentality</a>
+        <a href="#" class="text-lg hover:text-indigo-500">About</a>
+      </div>
+
+      <!-- Toggle Menu Button (Mobile) -->
+      <button class="md:hidden" type="button" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars text-4xl p-3"></i>
+      </button>
+
+      <!-- Electron Developers Button -->
+      <button
+        type="button"
+        class="hidden md:block font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500"
+      >
+        <i class="fa-brands fa-react text-xl"></i>
+        <span>Electrons</span>
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Developers</span>
+      </button>
+    </nav>
+
+    <!-- for-mobile and smaller screen   -->
+    <div class="fixed bg-white inset-0 md:hidden font-semibold">
+      <div class="flex items-center gap-2">
+        <!-- Logo Image -->
+        <a href="#">
+          <img
+            src="./assets/tailwind logo.webp"
+            alt="Tailwind Logo"
+            class="max-w-12 max-h-12 object-cover"
+          />
+        </a>
+        <span class="text-2xl text-black font-heading">Logo</span>
+      </div>
+      <!-- links  -->
+      <div id="links" class="flex flex-col items-center gap-y-10 font-code">
+        <a href="#" class="text-lg hover:text-indigo-500">Pricing</a>
+        <a href="#" class="text-lg hover:text-indigo-500">Courses</a>
+        <a href="#" class="text-lg hover:text-indigo-500">Tailwind</a>
+        <a href="#" class="text-lg hover:text-indigo-500">Mentality</a>
+        <a href="#" class="text-lg hover:text-indigo-500">About</a>
+
+        <!-- Electron Developers Button -->
+      <button
+        type="button"
+        class="font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500 "
+      >
+        <i class="fa-brands fa-react text-xl"></i>
+        <span>Electrons</span>
+        <i class="fa-solid fa-arrow-right"></i>
+        <span>Developers</span>
+      </button>
+      </div>
+      
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
