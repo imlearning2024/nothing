@@ -9,7 +9,7 @@
 
   <body>
     <!-- Navbar - Modern & Responsive -->
-    <nav class="bg-white flex justify-between items-center p-3">
+    <nav class="bg-white flex justify-between items-center p-2">
       <div class="flex items-center gap-2">
         <!-- Logo Image -->
         <a href="#">
@@ -35,8 +35,8 @@
       </div>
 
       <!-- Toggle Menu Button (Mobile) -->
-      <button class="md:hidden" type="button" onclick="toggleMenu()">
-        <i class="fa-solid fa-bars text-4xl p-3"></i>
+      <button class="lg:hidden" type="button" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars text-4xl p-2"></i>
       </button>
 
       <!-- Electron Developers Button -->
@@ -53,7 +53,7 @@
       <!-- for-mobile and smaller screen   -->
       <div
         id="nav_mobile"
-        class="fixed bg-white inset-0 md:hidden font-semibold"
+        class="fixed hidden z-10 bg-white inset-0 lg:hidden font-semibold"
       >
         <div class="flex items-center gap-2 m-3 justify-between">
           <!-- Logo Image -->
@@ -64,12 +64,12 @@
               class="max-w-12 max-h-12 object-cover"
             />
           </a>
-          <span class="text-2xl text-black font-heading font-extrabold"
+          <span class="text-2xl text-black font-heading font-extrabold md:ml-4"
             >Brand</span
           >
 
           <!-- Toggle Menu Button (Mobile) -->
-          <button class="md:hidden" type="button" onclick="toggleMenu()">
+          <button class="lg:hidden" type="button" onclick="toggleMenu()">
             <i class="fa-solid fa-xmark text-4xl p-3 text-gray-500"></i>
           </button>
         </div>
@@ -98,18 +98,60 @@
         <!-- Electron Developers Button -->
         <div id="button-closer" class="w-full hover:bg-gray-50 rounded p-4">
           <button
-          type="button"
-          class="font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500 hover:bg-gray-50 ml-8"
-        >
-          <i class="fa-brands fa-react text-xl"></i>
-          <span>Electrons</span>
-          <i class="fa-solid fa-arrow-right"></i>
-          <span>Developers</span>
-        </button>
+            type="button"
+            class="font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500 hover:bg-gray-50 ml-8"
+          >
+            <i class="fa-brands fa-react text-xl"></i>
+            <span>Electrons</span>
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Developers</span>
+          </button>
         </div>
-        
       </div>
     </nav>
+
+    <!-- main  -->
+    <main id="main">
+      <!-- hero   -->
+      <div
+        id="hero"
+        class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to-transparent"
+      >
+        <div id="hero-container" class="flex flex-col items-start px-6 mx-auto">
+          <div
+            id="version-text "
+            class="flex items-center gap-x-2 p-1 my-6 bg-yellow-50 border-2 border-yellow-200 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-2 transition duration-300 group"
+          >
+            <div id="cirlce" class="h-3 w-3 bg-orange-300 rounded-full"></div>
+            <span class="font-subheading text-orange-400">tailwind v0.32:</span>
+            <span class="font-extrabold font-heading text-yellow-600"
+              >Explore-new-technology</span
+            >
+            <i
+              class="fa-solid fa-arrow-right px-1 text-xl items-center text-blue-900 group-hover:translate-x-1 transition duration-300"
+            ></i>
+          </div>
+          <!-- Heading  -->
+          <h1 class="font-extrabold font-heading text-5xl py-3">
+            Learn Demanding tools and tech
+          </h1>
+
+          <p class="font-code text-xl py-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            voluptatum molestiae Lorem, ipsum dolor..
+          </p>
+
+          <div id="two-button " class="flex flex-col items-center gap-y-4 w-full">
+            <button type="button" class="w-full py-3 rounded-md  block bg-blue-800 ring-2 ring-blue-950 text-white font-extrabold">
+              Download now
+            </button>
+            <button type="button" class="w-full py-3 rounded-md  block bg-gray-100 ring-2 ring-gray-200">
+              Read Doc
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
   <script src="./script.js"></script>
 </html>
