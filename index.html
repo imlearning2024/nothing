@@ -10,22 +10,20 @@
   <body>
     <!-- Navbar - Modern & Responsive -->
     <nav class="bg-white flex justify-between items-center p-2">
-      <div class="flex items-center gap-2">
-        <!-- Logo Image -->
-        <a href="#">
-          <img
-            src="./assets/tailwind logo.webp"
-            alt="Tailwind Logo"
-            class="max-w-12 max-h-12 object-cover"
-          />
-        </a>
+      <!-- Logo Image -->
+      <a href="#" class="gap-2 flex-1 flex items-center">
+        <img
+          src="./assets/tailwind logo.webp"
+          alt="Tailwind Logo"
+          class="max-w-12 max-h-12 object-cover"
+        />
         <span class="text-2xl text-black font-heading">Logo</span>
-      </div>
+      </a>
 
       <!-- Links -->
       <div
         id="nav-menu"
-        class="font-code hidden lg:flex gap-8 justify-between items-center"
+        class="font-code hidden lg:flex gap-8 justify-between items-center mr-auto"
       >
         <a href="#" class="text-lg">Pricing</a>
         <a href="#" class="text-lg">Courses</a>
@@ -40,15 +38,17 @@
       </button>
 
       <!-- Electron Developers Button -->
-      <button
-        type="button"
-        class="hidden lg:block font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500"
-      >
-        <i class="fa-brands fa-react text-xl"></i>
-        <span>Electrons</span>
-        <i class="fa-solid fa-arrow-right"></i>
-        <span>Developers</span>
-      </button>
+      <div class="hidden lg:flex flex-1 justify-end">
+        <button
+          type="button"
+          class="font-semibold ring-2 hover:ring-violet-500 ring-gray-300 rounded-md px-6 py-1 mr-4 hover:text-violet-500 flex flex-row items-center gap-x-2"
+        >
+          <i class="fa-brands fa-react text-xl"></i>
+          <span>Electrons</span>
+          <i class="fa-solid fa-arrow-right"></i>
+          <span>Developers</span>
+        </button>
+      </div>
 
       <!-- for-mobile and smaller screen   -->
       <div
@@ -115,13 +115,13 @@
       <!-- hero   -->
       <div
         id="hero"
-        class="min-h-screen bg-gradient-to-br from-purple-50 via-orange-50 to-transparent"
+        class="min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent"
       >
-        <div id="hero-container" class="flex flex-col items-start px-6 mx-auto">
-          <div
-            id="version-text "
-            class="flex items-center gap-x-2 p-1 my-6 bg-yellow-50 border-2 border-yellow-200 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-2 transition duration-300 group"
-          >
+        <div
+          id="hero-container"
+          class="flex flex-col items-start px-6 mx-auto sm:items-center sm:pt-10"
+        >
+          <div id="version-text " class="version-text group">
             <div id="cirlce" class="h-3 w-3 bg-orange-300 rounded-full"></div>
             <span class="font-subheading text-orange-400">tailwind v0.32:</span>
             <span class="font-extrabold font-heading text-yellow-600"
@@ -131,21 +131,53 @@
               class="fa-solid fa-arrow-right px-1 text-xl items-center text-blue-900 group-hover:translate-x-1 transition duration-300"
             ></i>
           </div>
+
+          <!-- horo features  -->
+
+          <div id="hero-features" class="hidden md:flex flex-row items-center gap-x-10 md:gap-x-6 text-xl text-gray-500 leading-normal ">
+            <div class="flex flex-row items-center gap-x-3 md:gap-x-2 ">
+              <i class="fa-solid fa-code"></i>
+              <p>Code optional</p>
+            </div>
+            <div class="flex flex-row items-center gap-x-3 md:gap-x-2">
+              <i class="fa-solid fa-tarp-droplet"></i>
+              <p>Drag & drop builder</p>
+            </div>
+            <div class="flex flex-row items-center gap-x-3 md:gap-x-2">
+              <i class="fa-solid fa-laptop-file"></i>
+              <p>Window, Mac, Linux</p>
+            </div>
+          </div>
+
+
           <!-- Heading  -->
-          <h1 class="font-extrabold font-heading text-5xl py-3">
+          <h1
+            class="font-extrabold font-heading text-5xl py-3 sm:text-center sm:text-6xl sm:leading-normal max-w-[700px] "
+          >
             Learn Demanding tools and tech
           </h1>
 
-          <p class="font-code text-xl py-8">
+          <p
+            class="font-code text-xl py-7 text-gray-700 leading-tight sm:text-center sm:text-2xl sm:py-8 max-w-[700px]"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
             voluptatum molestiae Lorem, ipsum dolor..
           </p>
 
-          <div id="two-button " class="flex flex-col items-center gap-y-4 w-full">
-            <button type="button" class="w-full py-3 rounded-md  block bg-blue-800 ring-2 ring-blue-950 text-white font-extrabold">
+          <div
+            id="two-button "
+            class="flex flex-col items-center gap-y-8 w-full sm:flex-row mt-4 gap-x-8 justify-center"
+          >
+            <button
+              type="button"
+              class="max-sm:w-full md:w-fit py-4 px-20 rounded-md block bg-blue-800 ring-2 ring-blue-950 text-white font-extrabold hover:opacity-90"
+            >
               Download now
             </button>
-            <button type="button" class="w-full py-3 rounded-md  block bg-gray-100 ring-2 ring-gray-200">
+            <button
+              type="button"
+              class="max-sm:w-full md:w-fit py-4 px-20 rounded-md block bg-gray-100 ring-2 ring-gray-200 font-extrabold hover:bg-gray-200"
+            >
               Read Doc
             </button>
           </div>
