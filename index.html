@@ -25,13 +25,13 @@
       <!-- Links -->
       <div
         id="nav-menu"
-        class="font-code hidden md:flex gap-8 justify-between items-center"
+        class="font-code hidden lg:flex gap-8 justify-between items-center"
       >
-        <a href="#" class="text-lg hover:text-indigo-500">Pricing</a>
-        <a href="#" class="text-lg hover:text-indigo-500">Courses</a>
-        <a href="#" class="text-lg hover:text-indigo-500">Tailwind</a>
-        <a href="#" class="text-lg hover:text-indigo-500">Mentality</a>
-        <a href="#" class="text-lg hover:text-indigo-500">About</a>
+        <a href="#" class="text-lg">Pricing</a>
+        <a href="#" class="text-lg">Courses</a>
+        <a href="#" class="text-lg">Tailwind</a>
+        <a href="#" class="text-lg">Mentality</a>
+        <a href="#" class="text-lg">About</a>
       </div>
 
       <!-- Toggle Menu Button (Mobile) -->
@@ -42,48 +42,74 @@
       <!-- Electron Developers Button -->
       <button
         type="button"
-        class="hidden md:block font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500"
+        class="hidden lg:block font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500"
       >
         <i class="fa-brands fa-react text-xl"></i>
         <span>Electrons</span>
         <i class="fa-solid fa-arrow-right"></i>
         <span>Developers</span>
       </button>
-    </nav>
 
-    <!-- for-mobile and smaller screen   -->
-    <div class="fixed bg-white inset-0 md:hidden font-semibold">
-      <div class="flex items-center gap-2 m-2">
-        <!-- Logo Image -->
-        <a href="#">
-          <img
-            src="./assets/tailwind logo.webp"
-            alt="Tailwind Logo"
-            class="max-w-12 max-h-12 object-cover"
-          />
-        </a>
-        <span class="text-2xl text-black font-heading">Logo</span>
-      </div>
-      <!-- links  -->
-      <div id="links" class="flex flex-col items-center gap-y-10 font-code">
-        <a href="#" class="text-lg hover:text-indigo-500">Pricing</a>
-        <a href="#" class="text-lg hover:text-indigo-500">Courses</a>
-        <a href="#" class="text-lg hover:text-indigo-500">Tailwind</a>
-        <a href="#" class="text-lg hover:text-indigo-500">Mentality</a>
-        <a href="#" class="text-lg hover:text-indigo-500">About</a>
+      <!-- for-mobile and smaller screen   -->
+      <div
+        id="nav_mobile"
+        class="fixed bg-white inset-0 md:hidden font-semibold"
+      >
+        <div class="flex items-center gap-2 m-3 justify-between">
+          <!-- Logo Image -->
+          <a href="#">
+            <img
+              src="./assets/tailwind logo.webp"
+              alt="Tailwind Logo"
+              class="max-w-12 max-h-12 object-cover"
+            />
+          </a>
+          <span class="text-2xl text-black font-heading font-extrabold"
+            >Brand</span
+          >
 
+          <!-- Toggle Menu Button (Mobile) -->
+          <button class="md:hidden" type="button" onclick="toggleMenu()">
+            <i class="fa-solid fa-xmark text-4xl p-3 text-gray-500"></i>
+          </button>
+        </div>
+
+        <!-- links  -->
+        <div
+          id="links"
+          class="flex flex-col items-start gap-y-4 font-code border-b-2 border-gray-100 m-10 pb-10"
+        >
+          <a href="#" class="text-lg w-full hover:bg-gray-50 rounded p-4 block"
+            >Pricing</a
+          >
+          <a href="#" class="text-lg w-full hover:bg-gray-50 rounded p-4 block"
+            >Courses</a
+          >
+          <a href="#" class="text-lg w-full hover:bg-gray-100 rounded p-4 block"
+            >Tailwind</a
+          >
+          <a href="#" class="text-lg w-full hover:bg-gray-50 rounded p-4 block"
+            >Mentality</a
+          >
+          <a href="#" class="text-lg w-full hover:bg-gray-50 rounded p-4 block"
+            >About</a
+          >
+        </div>
         <!-- Electron Developers Button -->
-        <button
+        <div id="button-closer" class="w-full hover:bg-gray-50 rounded p-4">
+          <button
           type="button"
-          class="font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500"
+          class="font-semibold ring-2 hover:ring-violet-500 rounded p-1 hover:text-violet-500 hover:bg-gray-50 ml-8"
         >
           <i class="fa-brands fa-react text-xl"></i>
           <span>Electrons</span>
           <i class="fa-solid fa-arrow-right"></i>
           <span>Developers</span>
         </button>
+        </div>
+        
       </div>
-    </div>
-    <script src="./script.js"></script>
+    </nav>
   </body>
+  <script src="./script.js"></script>
 </html>
